@@ -1,0 +1,23 @@
+from: markdown
+pdf-engine: xelatex
+template: tex/template.tex
+# make chapter top-level because our used documentclass "extreport" uses
+# chapter as top level in its internal commands (tableofcontents, for example)
+top-level-division: chapter
+listings: true
+
+metadata:
+  # russian style quotes, cite, etc
+  lang: ru-RU
+  # bibliography
+  bibliography: references.bib
+  csl: tex/biblio-russian-gost-7-1-2003-numeric.csl
+
+filters:
+  # russian style quotes
+  - deps/pandoc-quotes.lua
+  # italize latin
+  - deps/italize-latin.lua
+
+# bibliography
+citeproc: true
