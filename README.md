@@ -1,3 +1,6 @@
+Diploma thesis written in markdown, which then renders to pdf using pandoc,
+through tex (for styling).
+
 ## Usage
 
 1. Clone repo
